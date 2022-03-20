@@ -1,0 +1,39 @@
+.darkTheme {
+  .arm-icon__burger_24 {
+    background: var(--white-42);
+    &.active {
+      background: #fff;
+    }
+  }
+  .border-bottom {
+    border-bottom-color: var(--white-12);
+  }
+}
+.lightTheme {
+  .border-bottom {
+    border-bottom-color: var(--black-12);
+  }
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .menu-btn {
+    padding: 16px 20px 16px 16px;
+
+    .header__buttons-wrap {
+      min-width: 24px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      & > div {
+        display: flex;
+      }
+    }
+  }
+}
+
+.arm-icon__chevron-right_24 {
+  margin: 0 8px;
+}

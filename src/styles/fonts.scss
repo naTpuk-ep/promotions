@@ -1,0 +1,117 @@
+@font-face {
+  font-family: RobotoRegular;
+  src: url("../assets/fonts/roboto/Roboto-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: RobotoMedium;
+  src: url("../assets/fonts/roboto/Roboto-Medium.ttf");
+  font-width: 500;
+}
+:root {
+  --font_color: var(--black);
+}
+.lightTheme {
+  --font_color: var(--black);
+}
+.darkTheme {
+  --font_color: var(--white-87);
+}
+
+p {
+  padding: 0;
+  margin: 0 !important;
+}
+.opacity-text {
+  color: var(--black-54) !important;
+
+  i {
+    background: var(--black-54) !important;
+  }
+}
+
+.opacity-text_60 {
+  color: var(--black-60) !important;
+}
+.opacity-text_38 {
+  color: var(--black-38) !important;
+}
+
+.font__headline4 {
+  font-size: 34px !important;
+  line-height: 40px !important;
+  font-family: RobotoRegular;
+  color: var(--font_color);
+}
+.font__headline5 {
+  font-size: 24px !important;
+  line-height: 28px !important;
+  font-family: RobotoRegular;
+  color: var(--font_color);
+}
+.font__headline6 {
+  font-size: 20px !important;
+  line-height: 24px !important;
+  font-family: RobotoMedium;
+  color: var(--font_color);
+}
+.font__subtitle1 {
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-family: RobotoMedium;
+  color: var(--font_color);
+}
+.font__body1 {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: RobotoRegular;
+  color: var(--font_color);
+}
+.font__subtitle2 {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: RobotoMedium;
+  color: var(--font_color);
+}
+.font__body2 {
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-family: RobotoRegular;
+  color: var(--font_color);
+}
+.font__button,
+.font__button span {
+  font-size: 14px !important;
+  line-height: 16px !important;
+  font-family: RobotoMedium;
+  color: var(--font_color);
+}
+.font__caption1 {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: RobotoMedium;
+  color: var(--font_color);
+}
+.font__caption2 {
+  font-size: 12px !important;
+  line-height: 16px !important;
+  font-family: RobotoRegular;
+  color: var(--font_color);
+}
+.font__subtitle-description {
+  font-size: 10px !important;
+  line-height: 12px !important;
+  font-family: RobotoRegular;
+  color: var(--font_color);
+}
+.font__overline {
+  font-size: 10px !important;
+  line-height: 16px !important;
+  font-family: RobotoMedium;
+  letter-spacing: 1.5px;
+  color: var(--font_color);
+}
+.bold {
+  font-family: RobotoMedium !important;
+  font-weight: 500 !important;
+}

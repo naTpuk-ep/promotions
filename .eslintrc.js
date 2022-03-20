@@ -1,3 +1,5 @@
+// const path = require('path');
+
 module.exports = {
   root: true,
   overrides: [
@@ -16,6 +18,20 @@ module.exports = {
         'prettier',
         'plugin:prettier/recommended',
       ],
+      // settings: {
+      //   'import/resolver': {
+      //     webpack: {
+      //       config: {
+      //         resolve: {
+      //           alias: {
+      //             '~': path.join(__dirname, 'src/app'),
+      //           },
+      //           extensions: ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
+      //         },
+      //       },
+      //     },
+      //   },
+      // },
       rules: {
         'prettier/prettier': [
           'error',
@@ -75,6 +91,28 @@ module.exports = {
         'no-undef': 'off',
         'no-empty-function': 'off',
         'no-trailing-spaces': 'off',
+        'import/extensions': 'off',
+        //   [
+        //   'error',
+        //   'ignorePackages',
+        //   {
+        //     js: 'never',
+        //     jsx: 'never',
+        //     ts: 'never',
+        //     tsx: 'never',
+        //     mjs: 'never',
+        //   },
+        // ],
+        // 'import/extensions': [
+        //   'error',
+        //   'ignorePackages',
+        //   {
+        //     js: 'never',
+        //     jsx: 'never',
+        //     ts: 'never',
+        //     tsx: 'never',
+        //   },
+        // ],
         // 'constructor-super': 'error',
         // 'for-direction': 'error',
         // 'getter-return': 'error',

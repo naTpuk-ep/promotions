@@ -1,0 +1,222 @@
+:host {
+  display: block;
+  min-width: 52px;
+  z-index: 3;
+}
+
+.menu__item-button {
+  width: 100%;
+  &__selected {
+    background: var(--black_16);
+  }
+}
+
+//.search-menu__wrap {
+//  height: 0;
+//  overflow: hidden;
+//  transition: var(--transition);
+//
+//  &.open {
+//    height: 50px;
+//    margin: 16px 16px -12px 16px;
+//  }
+//
+//  input {
+//    width: 100%;
+//  }
+//}
+//[class*="level-"] {
+//  transition: var(--transition);
+//}
+//
+//.level-1 {
+//  padding-left: 0;
+//  min-width: 180px;
+//}
+//.level-2 {
+//  /* padding: 0 15px;
+//  width: 215px; */
+//}
+
+.menu-container {
+  display: block;
+  transition: 200ms cubic-bezier(0.86, 0, 0.07, 1);
+  z-index: 3;
+
+  .menu-item__active {
+    background: var(--indigo-500_16);
+    &:hover {
+      background: var(--indigo-500_16) !important;
+    }
+    //i {
+    //  background: var(--black-87);
+    //}
+    //.menu__item-title {
+    //  p {
+    //    color: var(--black-87);
+    //  }
+    //}
+  }
+
+  .menu__wrap {
+    margin-top: 8px;
+  }
+
+  .menu__item-container {
+    cursor: pointer;
+    position: relative;
+    margin: 0 8px;
+    &.menu-item__open {
+      height: auto;
+      overflow: visible;
+      & > .menu__item-wrap {
+        i {
+          background: var(--black-87);
+        }
+        .menu__item-title {
+          p {
+            color: var(--black-87);
+          }
+        }
+      }
+    }
+    &.open-item-submenu {
+      margin-right: 0;
+      & > .menu__item-wrap {
+        .menu__item {
+        }
+      }
+    }
+    &:not(.menu-item__open) {
+    }
+
+    .menu__item-wrap {
+      transition: var(--transition);
+
+      .menu__item {
+        display: flex;
+        flex: 100%;
+        align-items: center;
+        padding: 8px 0;
+        outline: none;
+        &:hover,
+        &.hover {
+          background: var(--indigo-500_16);
+        }
+        &.selected {
+          background: var(--primary-color);
+
+          .icon-wrap i {
+            background: var(--black-87);
+          }
+          .menu__item-title {
+            p {
+              color: var(--black-87);
+            }
+          }
+        }
+
+        .icon-wrap {
+          display: flex;
+          flex: 1 0 24px;
+          justify-content: center;
+          margin-left: 8px;
+        }
+
+        .menu__item-title-arrow-wrap {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex: 100%;
+          height: 26px;
+        }
+
+        .menu__item-title {
+          margin: 0 16px;
+        }
+      }
+    }
+    .submenu-wrap {
+      overflow: hidden;
+      transition: var(--transition);
+    }
+  }
+
+  .collapsed-submenu {
+    position: absolute;
+    top: 0;
+    left: 48px;
+    min-width: 230px;
+    width: max-content;
+    max-width: 500px;
+    filter: drop-shadow(-1px -1px 16px rgba(0, 0, 0, 0.02))
+      drop-shadow(4px 4px 16px rgba(0, 0, 0, 0.12));
+
+    .menu__item {
+      &.has-children {
+        background: none !important;
+        cursor: default;
+        i {
+          background: var(--black-87);
+        }
+        .menu__item-title {
+          p {
+            color: var(--black-87);
+          }
+        }
+      }
+    }
+  }
+
+  // развернутое меню
+  &.open-container {
+    width: 100%;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+
+    /* hide scroll in chrome and ff */
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .menu-item__open {
+      background: var(--indigo-500_08);
+    }
+
+    .level-2 {
+      padding-left: 32px;
+      padding-right: 15px;
+    }
+    .level-3 {
+      padding-left: 45px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.lightTheme {
+  &.menu-container {
+    .menu__item {
+      .icon-wrap i {
+        background: var(--black-60);
+      }
+      .menu__item-title {
+        p {
+          color: var(--black-60);
+        }
+      }
+    }
+    .collapsed-submenu {
+      background: #fff;
+    }
+
+    // свернутое меню
+    &:not(.open-container) {
+    }
+  }
+}
+
+.menu-container .menu__item .menu__item-title p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

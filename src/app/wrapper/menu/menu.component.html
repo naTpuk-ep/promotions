@@ -1,0 +1,147 @@
+<div
+  class="menu-container"
+  [ngClass]="{
+    'open-container': openMenuStatus
+  }"
+>
+  <!--  <div class="search-menu__wrap" *ngIf="showSearch" [ngClass]="{ open: openMenuStatus }">-->
+  <!--    <input-->
+  <!--      type="text"-->
+  <!--      pInputText-->
+  <!--      (input)="searchMenu($event)"-->
+  <!--      style="height: 32px"-->
+  <!--      placeholder="Поиск"-->
+  <!--      [(ngModel)]="searchMenuValue"-->
+  <!--    />-->
+  <!--  </div>-->
+
+  <div mat-nav-list class="menu__wrap">
+    <ng-container *ngFor="let item of preparedMenuList">
+      <div
+        class="menu__item-container"
+        (mouseenter)="menuItemEnter(item)"
+        (mouseleave)="menuItemLeave(item)"
+      >
+        <ng-container
+          *ngTemplateOutlet="itemMenu; context: { item: item, level: 1 }"
+        ></ng-container>
+        <!--        <div class="collapsed-submenu" *ngIf="item.openCollapsedSubmenu">-->
+        <!--          <ng-container-->
+        <!--            *ngTemplateOutlet="itemCollapsedSubmenu; context: { item: item, level: 1 }"-->
+        <!--          ></ng-container>-->
+        <!--        </div>-->
+      </div>
+    </ng-container>
+
+    <!--    <spro-cdk-no-data-->
+    <!--      *ngIf="!preparedMenuList.length"-->
+    <!--      [showIconStatus]="false"-->
+    <!--      title="Список меню пуст"-->
+    <!--    ></spro-cdk-no-data>-->
+  </div>
+</div>
+
+<ng-template #itemMenu let-item="item" let-level="level" let-index="index">
+  <div class="menu__item-wrap menu-item-level-{{ level }}">
+    <mat-list-item [routerLink]="item.children?.length ? null : item.url">
+      <button
+        class="menu__item-button"
+        mat-button
+        [ngClass]="{
+          'menu__item-button__selected': item.active
+        }"
+        (click)="openMenuItem($event, item)"
+      >
+        {{ item.title }}
+      </button>
+      <!--      <div-->
+      <!--        class="menu__item"-->
+      <!--        matRipple-->
+      <!--        [matRippleColor]="'rgba(63, 81, 181, 0.24)'"-->
+      <!--        [matRippleDisabled]="!item.children?.length && !openMenuStatus"-->
+      <!--        (click)="openMenuItem($event, item)"-->
+      <!--        [ngClass]="{-->
+      <!--          'has-children': item.children?.length > 0,-->
+      <!--          'menu-item__active': hasActiveMenuItem(item),-->
+      <!--          hover: item['openCollapsedSubmenu'],-->
+      <!--          selected: item.active-->
+      <!--        }"-->
+      <!--      >-->
+      <!--        <div-->
+      <!--          class="icon-wrap"-->
+      <!--          *ngIf="item.icon"-->
+      <!--          [ngClass]="{-->
+      <!--            hover: item['openCollapsedSubmenu']-->
+      <!--          }"-->
+      <!--        >-->
+      <!--          <i [ngClass]="item.icon"></i>-->
+      <!--        </div>-->
+      <!--        <div class="menu__item-title-arrow-wrap">-->
+      <!--          <div class="menu__item-title">-->
+      <!--            <p class="level-{{ level }}">-->
+      <!--              {{ item.title }}-->
+      <!--            </p>-->
+      <!--          </div>-->
+      <!--          <i-->
+      <!--            class="arm-icon__chevron-right_24"-->
+      <!--            *ngIf="item.children?.length > 0 && openMenuStatus"-->
+      <!--            [@openCloseStateIcon]="item.open ? 'open' : 'closed'"-->
+      <!--          ></i>-->
+      <!--        </div>-->
+      <!--      </div>-->
+    </mat-list-item>
+  </div>
+  <div
+    *ngIf="item.children?.length > 0"
+    class="submenu-wrap"
+    [@accordion]="item.open && openMenuStatus ? 'open' : 'closed'"
+    [ngClass]="{
+      'submenu-wrap__open': item.open && openMenuStatus,
+      'submenu-wrap__close': !item.open || !openMenuStatus
+    }"
+  >
+    <ng-container *ngFor="let itemChild of item.children; let index = index">
+      <ng-container
+        *ngTemplateOutlet="itemMenu; context: { item: itemChild, level: level + 1, index: index }"
+      ></ng-container>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-template #itemCollapsedSubmenu let-item="item" let-level="level" let-index="index">
+  <div class="menu__item-wrap menu-item-level-{{ level }}">
+    <a [routerLink]="item.children?.length ? null : item.url">
+      <div
+        class="menu__item"
+        (click)="openMenuItem($event, item)"
+        [ngClass]="{
+          'has-children': item.children?.length > 0,
+          selected: item.active
+        }"
+      >
+        <div class="menu__item-title-arrow-wrap">
+          <div class="menu__item-title">
+            <p class="level-{{ level }}">
+              {{ item.title }}
+            </p>
+          </div>
+          <i
+            class="arm-icon__chevron-right_24"
+            *ngIf="item.children?.length > 0"
+            [@openCloseStateIcon]="'open'"
+          ></i>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div *ngIf="item.children?.length > 0" class="submenu-wrap">
+    <ng-container *ngFor="let itemChild of item.children; let index = index">
+      <ng-container
+        *ngTemplateOutlet="
+          itemCollapsedSubmenu;
+          context: { item: itemChild, level: level + 1, index: index }
+        "
+      ></ng-container>
+    </ng-container>
+  </div>
+</ng-template>

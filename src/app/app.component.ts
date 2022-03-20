@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { leftMenuConfig } from './wrapper/menu/menu-config';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'promotions';
+  menuList = leftMenuConfig;
+  constructor() {}
 }

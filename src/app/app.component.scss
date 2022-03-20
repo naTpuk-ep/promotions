@@ -1,0 +1,45 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.left-container {
+  transition: var(--transition);
+}
+
+.right-container {
+}
+
+.page-container {
+  flex: 1 1 auto;
+}
+
+.main-container {
+  flex: 1 1 auto;
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+}
+
+app-header-container {
+  --height: 56px;
+
+  &.test-system {
+    --background: #d32f2f;
+  }
+}
+.test-system__wrap {
+  flex: 1 0 100px;
+  p {
+    color: var(--font_color);
+    text-align: center;
+  }
+}
+app-menu-header {
+  display: block;
+  &.test-system {
+    background: #d32f2f;
+  }
+}

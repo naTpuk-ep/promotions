@@ -1,0 +1,219 @@
+:root {
+  // primary color
+  --primary-color: var(--indigo-500);
+  --primary-color_87: var(--indigo-500_87);
+  --primary-color_74: var(--indigo-500_74);
+  --primary-color_60: var(--indigo-500_60);
+  --primary-color_36: var(--indigo-500_36);
+  --primary-color_24: var(--indigo-500_24);
+  --primary-color_16: var(--indigo-500_16);
+  --primary-color_12: var(--indigo-500_12);
+  --primary-color_08: var(--indigo-500_08);
+  --primary-color_04: var(--indigo-500_04);
+
+  // secondary color
+  --secondary-color: var(--teal-500);
+  --secondary-color_87: var(--teal-500_87);
+  --secondary-color_74: var(--teal-500_74);
+  --secondary-color_60: var(--teal-500_60);
+  --secondary-color_36: var(--teal-500_36);
+  --secondary-color_24: var(--teal-500_24);
+  --secondary-color_16: var(--teal-500_16);
+  --secondary-color_12: var(--teal-500_12);
+  --secondary-color_08: var(--teal-500_08);
+  --secondary-color_04: var(--teal-500_04);
+
+  //white
+  --white-87: rgba(255, 255, 255, 0.87);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-54: rgba(255, 255, 255, 0.54);
+  --white-42: rgba(255, 255, 255, 0.42);
+  --white-38: rgba(255, 255, 255, 0.38);
+  --white-36: rgba(255, 255, 255, 0.36);
+  --white-32: rgba(255, 255, 255, 0.32);
+  --white-26: rgba(255, 255, 255, 0.26);
+  --white-12: rgba(255, 255, 255, 0.12);
+  --white-08: rgba(255, 255, 255, 0.08);
+  --white-04: rgba(255, 255, 255, 0.04);
+
+  //black
+  --black: rgba(0, 0, 0, 0.87);
+  --black_74: rgba(0, 0, 0, 0.74);
+  --black_60: rgba(0, 0, 0, 0.6);
+  --black_36: rgba(0, 0, 0, 0.36);
+  --black_24: rgba(0, 0, 0, 0.24);
+  --black_16: rgba(0, 0, 0, 0.16);
+  --black_12: rgba(0, 0, 0, 0.12);
+  --black_08: rgba(0, 0, 0, 0.08);
+  --black_04: rgba(0, 0, 0, 0.04);
+
+  //grey
+  --grey-100: #f5f5f5;
+
+  // vkorg
+  --color-by: rgb(0, 150, 136);
+  --color-ru: rgb(25, 118, 210);
+  --color-pl: rgb(156, 39, 176);
+  --color-kz: rgb(239, 93, 168);
+  --color-by-08: rgba(0, 150, 136, 0.8);
+  --color-ru-08: rgba(25, 118, 210, 0.8);
+  --color-pl-08: rgba(156, 39, 176, 0.8);
+  --color-kz-08: rgba(239, 93, 168, 0.8);
+}
+
+.btn {
+  user-select: none;
+  //border-color: var(--black-12);
+  //border-radius: 4px;
+  //text-align: center;
+  //cursor: pointer;
+  //display: flex;
+  //align-items: center;
+  //padding: 6px 16px;
+
+  &.color-cyan p {
+    color: var(--cyan);
+  }
+
+  &.border-gray {
+    border: 1px solid var(--black-12);
+  }
+
+  &.border-cyan {
+    border: 1px solid var(--cyan);
+  }
+
+  &.background-orange {
+    p {
+      color: var(--black);
+    }
+  }
+
+  &.background-cyan,
+  &.background-red {
+    p {
+      color: #fff;
+    }
+  }
+
+  &.background-gray {
+    background: var(--black-04);
+    border: none;
+  }
+}
+
+.custom-badge-wrap {
+  &.green {
+    background: rgba(76, 175, 80, 0.08);
+
+    & i {
+      background: #4caf50;
+    }
+  }
+
+  &.red {
+    background: rgba(229, 57, 53, 0.08);
+
+    & i {
+      background: #f44336;
+    }
+  }
+
+  &.indigo {
+    background: rgba(63, 81, 181, 0.08);
+    color: #3f51b5;
+
+    p {
+      color: #3f51b5;
+    }
+
+    & i {
+      background: #3f51b5;
+    }
+  }
+}
+
+.background-indigo {
+  background: #3f51b5;
+}
+
+.color-black-overlay-60 {
+  color: var(--black-60);
+}
+.color-black-overlay-54 {
+  color: var(--black-54);
+}
+
+.color-black-overlay-38 {
+  color: var(--black-38);
+}
+
+.color-black-overlay-26 {
+  color: var(--black-26);
+}
+
+.color-indigo-500 {
+  color: var(--indigo-500);
+}
+
+.color-teal-500 {
+  color: var(--teal-500);
+}
+
+.color-black-overlay-87 {
+  color: var(--black-87);
+}
+
+.color-deep-purple {
+  color: var(--purple-500);
+}
+
+.background-teal-500 {
+  background: var(--teal-500);
+}
+.background-red-700 {
+  background: var(--red-700);
+}
+//
+//.background-primary-color {
+//  background: var(--primary-color);
+//}
+//.background-secondary-color {
+//  background: var(--secondary-color);
+//}
+
+.background-red-87 {
+  background: var(--red-700_87);
+}
+
+.background-primary-color {
+  background: var(--primary-color);
+}
+.background-secondary-color {
+  background: var(--secondary-color);
+}
+
+.background-transparent {
+  background: transparent;
+}
+
+$opacity: 04, 08, 16, 24, 36, 54, 60, 74, 87;
+
+$colors: primary-color, secondary-color, black, teal-500, red-700, orange-800;
+@each $i in $colors {
+  .color-#{$i} {
+    color: var(-- + $i);
+  }
+}
+
+.background-orange-800 {
+  background-color: var(--orange-800);
+}
+
+.background-teal-500_08 {
+  background-color: var(--secondary-color_08);
+}
+
+.background-red-700_08 {
+  background-color: var(--red-700_08)
+}
