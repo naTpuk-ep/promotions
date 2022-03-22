@@ -1,0 +1,12 @@
+<div [classList]="'header-container fixed ' + headerContainerClassList">
+  <!--    [ngClass]="{-->
+  <!--  fixed: fixed,-->
+  <!--  hide: !open-->
+  <!--  }"-->
+  <div class="header-container-left__wrap">
+    <ng-content></ng-content>
+  </div>
+  <div class="header-container-right__wrap">
+    <ng-content select=".right-side"></ng-content>
+  </div>
+</div>

@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-export type OpenLeftContainerStatusType =
-  | 'open-over'
-  | 'open-with-shift'
-  | 'open-collapse'
-  | 'close';
+import { WrapperService } from '../wrapper.service';
 
 @Component({
   selector: 'app-left-side-container',
@@ -12,14 +7,14 @@ export type OpenLeftContainerStatusType =
   styleUrls: ['./left-side-container.component.scss'],
 })
 export class LeftSideContainerComponent {
-  public openMenuStatus: OpenLeftContainerStatusType;
+  // public openMenuStatus!: OpenLeftContainerStatusType;
   // private _openStatusSubscription!: Subscription;
 
   // @Select(SproCdkLayoutState.getLeftContainerOpenStatus)
   // openStatus$!: Observable<OpenLeftContainerStatusType>;
 
-  constructor() {
-    this.openMenuStatus = 'open-over';
+  constructor(public wrapperService: WrapperService) {
+    // this.openMenuStatus = 'open-collapse';
     // this.stateSubscribe();
   }
 

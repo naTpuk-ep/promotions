@@ -23,13 +23,13 @@
   display: flex;
 }
 
-app-header-container {
-  --height: 56px;
-
-  &.test-system {
-    --background: #d32f2f;
-  }
-}
+//app-header-container {
+//  --header-height: 56px;
+//
+//  &.test-system {
+//    --background: #d32f2f;
+//  }
+//}
 .test-system__wrap {
   flex: 1 0 100px;
   p {

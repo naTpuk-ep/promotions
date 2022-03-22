@@ -8,6 +8,7 @@
 @import "styles/fonts";
 @import "styles/colors";
 @import "styles/common";
+@import "assets/icons";
 
 :root {
   --transition: 200ms cubic-bezier(0.86, 0, 0.07, 1);
@@ -51,9 +52,9 @@ body {
         display: none;
       }
 
-      spro-cdk-header-container {
-        --height: 56px;
-      }
+      //spro-cdk-header-container {
+      //  --header-height: 56px;
+      //}
     }
   }
 

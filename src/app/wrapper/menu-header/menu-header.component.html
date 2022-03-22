@@ -1,7 +1,13 @@
 <div [classList]="'menu-header ' + menuHeaderClassList">
   <div class="menu-btn">
-    <div class="header__buttons-wrap" (click)="toggle()" matRipple [matRippleColor]="'rgba(255, 255, 255, 0.2)'">
-      <i [ngClass]="{ active: containerOpenStatus !== 'open-collapse' }" class="arm-icon__burger_24"></i>
+    <div
+      class="header__buttons-wrap"
+      (click)="toggle()"
+      matRipple
+      [matRippleColor]="'rgba(255, 255, 255, 0.2)'"
+    >
+      <i class="icon__burger_24"></i>
+<!--        [ngClass]="{ active: containerOpenStatus !== 'open-collapse' }"-->
     </div>
   </div>
   <ng-content></ng-content>

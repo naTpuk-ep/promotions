@@ -1,0 +1,45 @@
+//.darkTheme {
+//  &.header-container {
+//    background: var(--background-dark-theme);
+//  }
+//}
+//.lightTheme {
+//  &.header-container {
+//    background: #fff;
+//  }
+//}
+
+.header-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--header-height);
+  padding: var(--padding, 8px 16px);
+  box-shadow: var(--box-shadow__02);
+  //background: var(--background) !important;
+  //border-color: var(--black_12);
+  //border-bottom: 1px solid;
+  transition: 200ms cubic-bezier(0.86, 0, 0.07, 1);
+
+  &.fixed {
+    position: sticky;
+    top: 0;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  .header-container-left__wrap {
+    display: flex;
+    width: 100%;
+  }
+  .header-container-right__wrap {
+    display: flex;
+  }
+}
+//spro-cdk-header-user-info {
+//  margin-right: 16px;
+//}

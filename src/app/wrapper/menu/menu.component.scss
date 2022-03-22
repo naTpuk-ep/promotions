@@ -6,6 +6,7 @@
 
 .menu__item-button {
   width: 100%;
+  overflow: hidden;
   &__selected {
     background: var(--black_16);
   }
@@ -66,6 +67,9 @@
     cursor: pointer;
     position: relative;
     margin: 0 8px;
+    i {
+      margin-right: 16px;
+    }
     &.menu-item__open {
       height: auto;
       overflow: visible;
@@ -219,4 +223,11 @@
 .menu-container .menu__item .menu__item-title p {
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+::ng-deep {
+  .mat-button {
+    min-width: 0 !important;
+    padding: 0 8px !important;
+  }
 }

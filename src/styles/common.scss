@@ -3,6 +3,10 @@
 //}
 @import 'fonts';
 
+:root {
+  --header-height: 56px;
+}
+
 .search-input {
   width: 100%;
   height: auto;

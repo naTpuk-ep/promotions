@@ -15,6 +15,7 @@ export const leftMenuConfig: IMenuItem[] = [
     id: 66,
     title: 'Promotions',
     url: 'promotions',
+    icon: 'icon__sale_24',
   },
   // {
   //   id: 15,

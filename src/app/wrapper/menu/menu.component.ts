@@ -2,7 +2,6 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { accordion, openCloseStateIcon } from './menu-animations';
-import { OpenMenuStatusType } from '../menu-header/menu-header.component';
 import { IMenuItem } from './menu-config';
 
 @Component({

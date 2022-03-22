@@ -8,7 +8,7 @@ module.exports = {
     "max-line-length": [
       true,
       {
-        "single-quotes": true,
+        "string-quotes": "single",
         "ignore": ["comments"],
         "ignore-pattern": "^import |^export {(.*?)}",
         "check-strings": true,

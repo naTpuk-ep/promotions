@@ -1,0 +1,53 @@
+[class*="icon__"] {
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-mask-size: contain !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-size: contain !important;
+  vertical-align: middle;
+  background-color: var(--black_60);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+[class*="_12"][class*="icon__"] {
+  width: 12px;
+  height: 12px;
+}
+[class*="_16"][class*="icon__"] {
+  width: 16px;
+  height: 16px;
+}
+[class*="_18"][class*="icon__"] {
+  width: 18px;
+  height: 18px;
+}
+[class*="_20"][class*="icon__"] {
+  width: 20px;
+  height: 20px;
+}
+[class*="_24"][class*="icon__"] {
+  width: 24px;
+  height: 24px;
+}
+[class*="_48"][class*="icon__"] {
+  width: 48px;
+  height: 48px;
+}
+[class*="_56"][class*="icon__"] {
+  width: 56px;
+  height: 56px;
+}
+[class*="icon__burger"] {
+  -webkit-mask: url("./icons/icon-burger.svg");
+  mask: url("./icons/icon-burger.svg");
+}
+[class*="icon__sale"] {
+  -webkit-mask: url("./icons/sale.svg");
+  mask: url("./icons/sale.svg");
+}
